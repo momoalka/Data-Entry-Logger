@@ -18,7 +18,7 @@ class SubmittalsRFisLog:
         self.xlApp.Visible = True
 
         # Excel Workbook Reference
-        self.wb = self.xlApp.Workbooks.Open(os.path.join(os.getcwd(), 'BF-54-2019 Submittal Log.xlsx'))
+        self.wb = self.xlApp.Workbooks.Open(os.path.join(os.getcwd(), 'GENERIC_NAME_HERE.xlsx'))
 
         # Excel Worksheet object Reference
         self.ws = self.wb.Worksheets('Submittals')
@@ -66,7 +66,7 @@ class DataEntryApp(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle('BFB-15-2019: Main Cable Dehumidification')
-        self.setWindowIcon(QIcon('TTLogo.ico'))
+        self.setWindowIcon(QIcon('GENERIC.ico'))
 
 
         self.setMinimumWidth(500)
@@ -109,7 +109,7 @@ class DataEntryApp(QWidget):
 
         self.comboReviewerClassification = QComboBox()
         self.comboReviewerClassification.setMaximumWidth(int(self.rect().width()*0.2))
-        self.comboReviewerClassification.addItems(('TT', 'COWI', 'WCA'))
+        self.comboReviewerClassification.addItems(('GEN1', 'GEN2', 'GEN3'))
         subLayouts[2].addWidget(QLabel('Reviewer: '), 0, alignment = Qt.AlignRight)
         subLayouts[2].addWidget(self.comboReviewerClassification, 5)
 
